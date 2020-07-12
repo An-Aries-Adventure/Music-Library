@@ -9,10 +9,12 @@ $(document).ready(function(){
         dataType:"json",
         type: "get",
         
-        success: function(data, meta, third){
+        success: function(data, second, third){
             // let result = JSON.stringify(data)
             for (let i = 0; i < data.length; i++){
-                    $("#musicTable").find('tbody').append(`<tr><td>Title</td><td>Album</td><td>Artist</td></tr>`);
+                    $("#musicTable").find('tbody').append(`<tr><td>${data[i]["title"]}</td><td>${data[i]["album"]}</td><td>${data[i]["artist"]}</td><td>${data[i]["genre"]}</td><td>${data[i]["releaseDate"]}</td></tr>`)
+                    
+                    // <tr><td>data[i]</td><td>data.Album[i]</td><td>data.Artist[i]</td></tr>);["Title"]
                 }
 
 
