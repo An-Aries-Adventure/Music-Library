@@ -5,7 +5,7 @@
   margin: 10px
 }
 
-.contact_container {
+.container {
   max-width: fit-content;
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -24,4 +24,10 @@ font-size: large;
 color: blue;
 }
 
-
+.backgroundImage{
+  background-image: url(Photos/red.jpg);
+  height: auto;
+  width: auto;
+  background-size: 100%;
+  background-position: center;
+}

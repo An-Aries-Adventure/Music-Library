@@ -2,14 +2,29 @@
 <html>
     <head>
         <style>
+            td, th {
+                border: 3px solid #dddddd;
+                text-align: left;
+                padding: 15px;
+            }
         </style> 
         <title>Music Library</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="custom_style_sheet.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script> 
+            $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $("#musicTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+        </script>
     </head>
-    <body>
+    <body class = backgroundImage>
         <script src="app.js"></script>
         <img class = "logo" src="Photos/logo.png" alt = "Aries Symbol">
         <br />
@@ -18,14 +33,18 @@
         <br />
         <br />
         <br />
-        <h1 style = "margin-left: 50px;">Music Library</h1>  
+        <h1 style = "margin-left: 50px; font-family: fantasy;">Music Library</h1> 
+        <p style = "margin-left: 50px; font-family: fantasy;">Type something in the search box below to search the table:</p>  
+        <input style = "margin-left: 50px"  id="myInput" type="text" placeholder="Search..">
+        <br><br> 
         <br />
         <div class = "contact_container">
             <table id ="musicTable" class = "tableFont">
                 <tr></tr><th>Title</th><th>Album</th><th>Artist</th><th>Genre</th><th>Release Date</th></tr>
             </table>
         </div>
-            
+        <br />
+        <br />  
     </body>
      
 </html>
