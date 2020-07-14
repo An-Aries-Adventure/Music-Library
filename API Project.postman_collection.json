@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "www.devcodecampmusiclibrary.com/api/music/id",
+					"raw": "www.devcodecampmusiclibrary.com/api/music",
 					"host": [
 						"www",
 						"devcodecampmusiclibrary",
@@ -19,20 +19,19 @@
 					],
 					"path": [
 						"api",
-						"music",
-						"id"
+						"music"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "www.devcodecampmusiclibrary.com/api/music",
+			"name": "www.devcodecampmusiclibrary.com/api/music/1",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "www.devcodecampmusiclibrary.com/api/music/id",
+					"raw": "www.devcodecampmusiclibrary.com/api/music/1",
 					"host": [
 						"www",
 						"devcodecampmusiclibrary",
@@ -41,7 +40,7 @@
 					"path": [
 						"api",
 						"music",
-						"id"
+						"1"
 					]
 				}
 			},
